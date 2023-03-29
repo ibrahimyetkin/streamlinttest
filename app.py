@@ -2,7 +2,7 @@ import streamlit as st
 
 def home_page():
     st.title('Ana Sayfa')
-    st.write('Bu çok sayfalı bir Streamlit uygulamasının ana sayfasıdır.')
+    st.write('Bu çok sayfalı bir Streamlit aad uygulamasınınada ana sayfasıdır.')
 
 def page_one():
     st.title('1. Sayfa')
