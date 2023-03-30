@@ -50,7 +50,7 @@ def call_openai(prompt):
 
     try:
         
-        openai.api_key = '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'
+        openai.api_key = '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'
         response = openai.ChatCompletion.create(
         model='gpt-3.5-turbo',
         messages=[
