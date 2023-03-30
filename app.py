@@ -59,9 +59,8 @@ def call_openai(prompt):
         ],
         max_tokens=1200
         )
-    except:
-        st.error(
-            "Error: This is likely a rate limit error for GPT-4. Currently OpenAI accepts 25 requests every 3 hours for GPT-4. This means OpenAI will start rejecting some requests randomly. There are two solutions: Use GPT-3.5-Turbo, or use your own OpenAI API key.")
+    except Exception as e:
+        st.error(repr(e))
         st.stop()
 
     code_response = response.choices[0].message.content
