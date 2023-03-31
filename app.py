@@ -75,14 +75,14 @@ def page_two():
 
 def page_three():
     st.title('Akıllı Sulama')
-    st.write('Ürünlere ne zaman ve ne kadar su uygulanacağını tahmin etmek için hava durumu verilerini kullanarak sulama sistemlerini optimize etmek için kullanılabilir.')
+    st.write('Yapa zeka, ürünlere ne zaman ve ne kadar su uygulanacağını tahmin etmek için hava durumu verilerini kullanarak sulama sistemlerini optimize etmek için kullanılabilir.')
 
 def page_four():
     st.title('Otomasyon')
-    st.write('Ekim, hasat ve ekin büyümesini izleme gibi manuel görevleri otomatikleştirmek için kullanılabilir. Bu, çiftçilerin zamandan ve işçilik maliyetlerinden tasarruf etmesine ve insan hatası riskini azaltmasına yardımcı olabilir.')
+    st.write('Yapa zeka, ekim, hasat ve ekin büyümesini izleme gibi manuel görevleri otomatikleştirmek için kullanılabilir. Bu, çiftçilerin zamandan ve işçilik maliyetlerinden tasarruf etmesine ve insan hatası riskini azaltmasına yardımcı olabilir.')
 def page_five():    
     st.title('Tahmine dayalı analitik planlama')
-    st.write('Hassas tarım tekniklerini bilgilendirmek için hava durumu raporları, toprak örnekleri ve piyasa fiyatları gibi çeşitli kaynaklardan gelen verileri analiz etmek için kullanılabilir. Bu, çiftçilerin ekim, gübreleme ve mahsul koruma hakkında daha bilinçli kararlar almasına yardımcı olabilir.')
+    st.write('Yapa zeka, hassas tarım tekniklerini bilgilendirmek için hava durumu raporları, toprak örnekleri ve piyasa fiyatları gibi çeşitli kaynaklardan gelen verileri analiz etmek için kullanılabilir. Bu, çiftçilerin ekim, gübreleme ve mahsul koruma hakkında daha bilinçli kararlar almasına yardımcı olabilir.')
 
      
 
