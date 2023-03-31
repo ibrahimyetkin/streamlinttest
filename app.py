@@ -1,6 +1,9 @@
 import streamlit as st
 import openai
 from openai.error import AuthenticationError
+import requests
+from bs4 import BeautifulSoup
+from googletrans import Translator
 
 GPT_SYSTEM_INSTRUCTIONS = '''Sana bitkinin adını, toprağın nem oranını, ph değerini ve sıcaklık bilgilerini vericem.
 sana verilen bu veriler ile  bitki sağlık durumunu değerlendirmeni isteyeceğim.  Yani durumu nasıl normal mi gibi. Olması gereken değerler aralıklarını belirt. Ve neler yapmam gerektiğini söyle. Herşeyi maddeler olarak yaz. Sadece bilgi ver başka gereksiz şeyler söyleme.'''
@@ -39,8 +42,35 @@ def page_one():
     
 
 def page_two():
-    st.title('2. Sayfa')
-    st.write('Bu çok sayfalı bir Streamlit uygulamasının ikinci sayfasıdır.')
+
+    # Web page scraping
+    url = "https://www.agriculture.com/news/technology"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    # Set up translation
+    translator = Translator(service_urls=["translate.google.com"])
+    target_language = "tr"
+
+    # Title and description
+    st.title("Tarım Alanındaki Son Teknolojiler ve Gelişmeler")
+    st.write("Bu uygulama, tarım alanındaki en son teknolojileri ve gelişmeleri göstermektedir.")
+
+    # Display the latest developments
+    st.header("Son Gelişmeler")
+    news_items = soup.find_all("div", class_="recent-content-title-teaser")
+
+    for item in news_items:
+        title = item.find("span", class_="field-content").text.strip()
+        description = item.find("div", class_="field-body").text.strip()
+
+        # Translate the title and description
+        translated_title = translator.translate(title, dest=target_language).text
+        translated_description = translator.translate(description, dest=target_language).text
+
+        st.subheader(translated_title)
+        st.write("Açıklama:", translated_description)
+
 
 def page_three():
     st.title('2. Sayfa')
