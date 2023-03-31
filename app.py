@@ -10,7 +10,8 @@ sana verilen bu veriler ile  bitki sağlık durumunu değerlendirmeni isteyeceğ
 
 def home_page():
     st.subheader('''Modern Eğitim Koleji''')
-    st.title('''Bitki Sağlığı Programı'na Hoş Geldiniz!''')
+    st.title('''Yapay Zeka ile Modern Tarım''')
+    st.write('''Bitki Sağlığı Programı'na Hoş Geldiniz!''')
     
     st.write('''
 
