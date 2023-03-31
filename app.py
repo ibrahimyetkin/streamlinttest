@@ -3,7 +3,7 @@ import openai
 from openai.error import AuthenticationError
 
 GPT_SYSTEM_INSTRUCTIONS = '''Sana bitkinin adını, toprağın nem oranını, ph değerini ve sıcaklık bilgilerini vericem.
-sana verilen bu veriler ile  bitki sağlık durumunu değerlendirmeni isteyeceğim.  Yani durumu nasıl normal mi gibi. Ve neler yapmam gerektiğini söylemeni istiyorum.  Sadece bilgi ver başka gereksiz şeyler söyleme.'''
+sana verilen bu veriler ile  bitki sağlık durumunu değerlendirmeni isteyeceğim.  Yani durumu nasıl normal mi gibi. Olması gereken değerler aralıklarını belirt. Ve neler yapmam gerektiğini söyle. Herşeyi maddeler olarak yaz. Sadece bilgi ver başka gereksiz şeyler söyleme.'''
 
 def home_page():
     st.subheader('''Modern Eğitim Koleji''')
