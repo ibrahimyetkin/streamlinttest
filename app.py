@@ -73,8 +73,18 @@ def page_two():
 
 
 def page_three():
-    st.title('2. Sayfa')
-    st.write('Bu çok sayfalı bir Streamlit uygulamasının ikinci sayfasıdır.')
+    st.title('Akıllı Sulama')
+    st.write('Ürünlere ne zaman ve ne kadar su uygulanacağını tahmin etmek için hava durumu verilerini kullanarak sulama sistemlerini optimize etmek için kullanılabilir.')
+
+def page_four():
+    st.title('Otomasyon')
+    st.write('Ekim, hasat ve ekin büyümesini izleme gibi manuel görevleri otomatikleştirmek için kullanılabilir. Bu, çiftçilerin zamandan ve işçilik maliyetlerinden tasarruf etmesine ve insan hatası riskini azaltmasına yardımcı olabilir.')
+def page_five():    
+    st.title('Tahmine dayalı analitik planlama')
+    st.write('Mahsul ve hayvancılık yönetimi kararlarını bilgilendirmek için çeşitli kaynaklardan büyük miktarda veriyi analiz edecek şekilde eğitilebilir. Bu, çiftçilerin operasyonlarını optimize etmelerine, verimleri artırmalarına ve maliyetleri düşürmelerine yardımcı olabilir.')
+
+     
+
 
 def call_openai(prompt):
 
@@ -103,7 +113,9 @@ PAGES = {
     'Ana Sayfa': home_page,
     'Ölçme': page_one,
     'Haberler': page_two,
-    'Zararlılar İle Mücadele': page_three
+    'Akıllı Sulama': page_three,
+    'Otomasyon': page_four,
+    'Planlama': page_five,
 }
 
 st.sidebar.title('Bitki Sağlığı')
