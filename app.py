@@ -81,7 +81,7 @@ def page_four():
     st.write('Ekim, hasat ve ekin büyümesini izleme gibi manuel görevleri otomatikleştirmek için kullanılabilir. Bu, çiftçilerin zamandan ve işçilik maliyetlerinden tasarruf etmesine ve insan hatası riskini azaltmasına yardımcı olabilir.')
 def page_five():    
     st.title('Tahmine dayalı analitik planlama')
-    st.write('Mahsul ve hayvancılık yönetimi kararlarını bilgilendirmek için çeşitli kaynaklardan büyük miktarda veriyi analiz edecek şekilde eğitilebilir. Bu, çiftçilerin operasyonlarını optimize etmelerine, verimleri artırmalarına ve maliyetleri düşürmelerine yardımcı olabilir.')
+    st.write('Hassas tarım tekniklerini bilgilendirmek için hava durumu raporları, toprak örnekleri ve piyasa fiyatları gibi çeşitli kaynaklardan gelen verileri analiz etmek için kullanılabilir. Bu, çiftçilerin ekim, gübreleme ve mahsul koruma hakkında daha bilinçli kararlar almasına yardımcı olabilir.')
 
      
 
