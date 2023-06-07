@@ -72,7 +72,7 @@ def page_two():
 
         
         translated_title = translator.translate(title)  #translator.translate(title, dest=target_language).text
-        translated_description = description #translator.translate(description, dest=target_language).text
+        translated_description = translator.translate(description)  #translator.translate(description, dest=target_language).text
 
         st.subheader(translated_title)
         st.write("Açıklama:", translated_description)
