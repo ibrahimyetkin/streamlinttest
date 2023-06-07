@@ -3,7 +3,8 @@ import openai
 from openai.error import AuthenticationError
 import requests
 from bs4 import BeautifulSoup
-from googletrans import Translator
+import translators as ts
+from deep_translator import GoogleTranslator
 
 GPT_SYSTEM_INSTRUCTIONS = '''Sana bitkinin adını, toprağın nem oranını, ph değerini ve sıcaklık bilgilerini vericem.
 sana verilen bu veriler ile  bitki sağlık durumunu değerlendirmeni isteyeceğim.  Yani durumu nasıl normal mi gibi. Olması gereken değerler aralıklarını belirt. Ve neler yapmam gerektiğini söyle. Herşeyi maddeler olarak yaz. Sadece bilgi ver başka gereksiz şeyler söyleme.'''
@@ -50,8 +51,10 @@ def page_two():
     soup = BeautifulSoup(response.text, "html.parser")
 
     # Set up translation
-    translator = Translator(service_urls=["translate.google.com"])
+    # translator = Translator(service_urls=["translate.google.com"])
     target_language = "tr"
+    translator = GoogleTranslator(source='auto', target='tr')
+    
 
     # Title and description
     st.title("Tarım Alanındaki Son Teknolojiler ve Gelişmeler")
@@ -66,8 +69,10 @@ def page_two():
         description = item.find("div", class_="field-body").text.strip()
 
         # Translate the title and description
-        translated_title = translator.translate(title, dest=target_language).text
-        translated_description = translator.translate(description, dest=target_language).text
+
+        
+        translated_title = translator.translate(title)  #translator.translate(title, dest=target_language).text
+        translated_description = description #translator.translate(description, dest=target_language).text
 
         st.subheader(translated_title)
         st.write("Açıklama:", translated_description)

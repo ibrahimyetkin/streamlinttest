@@ -2,3 +2,5 @@ openai
 beautifulsoup4
 requests
 googletrans==4.0.0-rc1
+translators~= 5.4
+deep-translator~=1.9
